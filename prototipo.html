@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prot&oacute;tipo Interativo - JOVI Modo Aula</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">J</div>
+        <div>
+          <div class="logo-text">JOVI</div>
+          <div class="logo-accent">MODO AULA</div>
+        </div>
+      </a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="index.html">In&iacute;cio</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="funcionalidades.html">Funcionalidades</a></li>
+          <li><a href="prototipo.html" class="active">Prot&oacute;tipo</a></li>
+          <li><a href="contato.html" class="btn-nav">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <input type="file" id="ocr-file-input" class="sr-only" accept="image/*">
+    <input type="file" id="audio-file-input" class="sr-only" accept="audio/*">
+
+    <section class="prototype-hero">
+      <div class="prototype-hero-content">
+        <article class="prototype-hero-copy">
+          <span class="hero-badge">Sprint 2</span>
+          <h1>Prot&oacute;tipo interativo do <span>Modo Aula</span></h1>
+          <p>
+            Esta p&aacute;gina traduz o prot&oacute;tipo em React para uma vers&atilde;o web naveg&aacute;vel, mantendo a proposta
+            de organizar fotos por mat&eacute;ria, auxiliar a captura e transformar imagens em material de estudo.
+          </p>
+          <div class="hero-buttons">
+            <a href="#demo" class="btn-primary">Testar prot&oacute;tipo</a>
+            <a href="funcionalidades.html" class="btn-secondary">Ver funcionalidades</a>
+          </div>
+        </article>
+
+        <aside class="prototype-summary-card">
+          <h2>Fluxo convertido para web</h2>
+          <ul class="prototype-summary-list">
+            <li>Entrada pela c&acirc;mera principal</li>
+            <li>Escolha da pasta da disciplina</li>
+            <li>Captura com dicas da IA</li>
+            <li>Sa&iacute;da com OCR e resumo inteligente</li>
+          </ul>
+          <p class="prototype-summary-note">
+            Tudo em HTML, CSS e JavaScript puro, pronto para apresenta&ccedil;&atilde;o e alinhado com a sprint.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="prototype-page-section" id="demo">
+      <div class="section-header">
+        <h2>Demonstra&ccedil;&atilde;o naveg&aacute;vel</h2>
+        <p>Use os bot&otilde;es da interface para explorar o fluxo completo do Modo Aula.</p>
+      </div>
+
+      <div class="prototype-layout">
+        <aside class="prototype-panel">
+          <div class="prototype-panel-card">
+            <p class="prototype-panel-label">Tela atual</p>
+            <h3 id="screen-title">C&acirc;mera principal</h3>
+            <p id="screen-description">Entrada inicial com destaque para o Modo Aula dentro da c&acirc;mera.</p>
+          </div>
+
+          <div class="prototype-panel-card">
+            <p class="prototype-panel-label">Atalhos</p>
+            <div class="prototype-jump-list" id="prototype-jump-list">
+              <button type="button" data-jump="main" class="jump-btn active">C&acirc;mera</button>
+              <button type="button" data-jump="folders" class="jump-btn">Pastas</button>
+              <button type="button" data-jump="capture" class="jump-btn">Captura</button>
+              <button type="button" data-jump="captured" class="jump-btn">Foto salva</button>
+              <button type="button" data-jump="ocr" class="jump-btn">OCR</button>
+              <button type="button" data-jump="ia" class="jump-btn">IA</button>
+              <button type="button" data-jump="timeline" class="jump-btn">Timeline</button>
+            </div>
+          </div>
+
+          <div class="prototype-panel-card">
+            <p class="prototype-panel-label">Conceitos do projeto</p>
+            <ul class="prototype-side-list">
+              <li>Organiza&ccedil;&atilde;o por disciplina</li>
+              <li>Captura mais leg&iacute;vel</li>
+              <li>Revis&atilde;o facilitada</li>
+              <li>Apoio ao estudo colaborativo</li>
+            </ul>
+          </div>
+
+          <div class="prototype-panel-card">
+            <p class="prototype-panel-label">Gemini IA</p>
+            <div class="prototype-settings">
+              <label for="gemini-api-key" class="prototype-settings-label">Chave da API para a demo</label>
+              <input type="password" id="gemini-api-key" class="prototype-settings-input" placeholder="Cole sua Gemini API Key">
+              <div class="prototype-settings-actions">
+                <button type="button" class="btn-primary prototype-settings-btn" id="save-gemini-key">Salvar chave</button>
+                <button type="button" class="btn-secondary prototype-settings-btn-secondary" id="clear-gemini-key">Limpar</button>
+              </div>
+              <p class="prototype-settings-status" id="gemini-key-status">A chave fica salva apenas neste navegador.</p>
+            </div>
+          </div>
+
+          <div class="prototype-panel-card">
+            <p class="prototype-panel-label">Gest&atilde;o do App</p>
+            <div class="prototype-settings">
+              <label for="new-subject-name" class="prototype-settings-label">Nova mat&eacute;ria</label>
+              <input type="text" id="new-subject-name" class="prototype-settings-input" placeholder="Ex.: Biologia">
+              <button type="button" class="btn-primary prototype-settings-btn" id="create-subject-btn">Criar mat&eacute;ria</button>
+
+              <label for="entry-title" class="prototype-settings-label">T&iacute;tulo do registro</label>
+              <input type="text" id="entry-title" class="prototype-settings-input" placeholder="Ex.: Aula sobre fun&ccedil;&otilde;es">
+
+              <label for="entry-note" class="prototype-settings-label">Notas r&aacute;pidas</label>
+              <textarea id="entry-note" class="prototype-settings-textarea" placeholder="Escreva observa&ccedil;&otilde;es, resumo ou contexto da aula."></textarea>
+
+              <label for="timeline-search" class="prototype-settings-label">Buscar na timeline</label>
+              <input type="text" id="timeline-search" class="prototype-settings-input" placeholder="Buscar por mat&eacute;ria, OCR ou nota">
+
+              <div class="prototype-settings-actions">
+                <button type="button" class="btn-primary prototype-settings-btn" id="save-note-btn">Salvar nota</button>
+                <button type="button" class="btn-secondary prototype-settings-btn-secondary" id="export-data-btn">Exportar dados</button>
+              </div>
+              <button type="button" class="btn-secondary prototype-settings-btn-secondary prototype-danger-btn" id="clear-demo-btn">Limpar dados da demo</button>
+              <p class="prototype-settings-status" id="app-data-status">Os dados da demo ficam salvos neste navegador.</p>
+            </div>
+          </div>
+        </aside>
+
+        <section class="phone-demo-wrapper" aria-label="Prot&oacute;tipo de celular">
+          <div class="phone-demo">
+            <div class="phone-status-bar">
+              <span>9:41</span>
+              <span>JOVI Live</span>
+            </div>
+            <div class="phone-demo-screen" id="prototype-screen"></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="prototype-page-section prototype-benefits-section">
+      <div class="section-header">
+        <h2>Como isso fortalece a entrega</h2>
+        <p>A demonstra&ccedil;&atilde;o deixa a proposta mais concreta e mostra a ideia funcionando de ponta a ponta.</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon bg-blue">01</div>
+          <h3>Mais fidelidade ao design</h3>
+          <p>O site passa a refletir melhor o prot&oacute;tipo entregue na sprint anterior.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon bg-pink">02</div>
+          <h3>Mais impacto visual</h3>
+          <p>O avaliador consegue interagir com a solu&ccedil;&atilde;o, em vez de ver apenas descri&ccedil;&otilde;es est&aacute;ticas.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon bg-green">03</div>
+          <h3>Base pronta para evoluir</h3>
+          <p>A estrutura pode receber mais telas, estados e conte&uacute;dos sem precisar recome&ccedil;ar.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 NextStage - Challenge FIAP x JOVI.</p>
+      <div class="footer-links">
+        <a href="index.html">In&iacute;cio</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="funcionalidades.html">Funcionalidades</a>
+        <a href="prototipo.html">Prot&oacute;tipo</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/modo-aula.js"></script>
+</body>
+</html>

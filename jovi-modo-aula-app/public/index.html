@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOVI Modo Aula App</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="side-panel">
+      <div class="brand-block">
+        <span class="brand-badge">JOVI</span>
+        <h1>Modo Aula App</h1>
+        <p>Base full-stack para evoluir o protótipo em um produto real.</p>
+      </div>
+
+      <section class="panel-card" id="auth-card">
+        <div class="auth-tabs">
+          <button class="tab-btn active" data-auth-mode="login">Entrar</button>
+          <button class="tab-btn" data-auth-mode="register">Cadastrar</button>
+        </div>
+        <form id="auth-form" class="stack-form">
+          <input type="text" id="auth-name" placeholder="Nome" class="hidden">
+          <input type="email" id="auth-email" placeholder="E-mail" required>
+          <input type="password" id="auth-password" placeholder="Senha" required>
+          <button type="submit" class="primary-btn">Continuar</button>
+        </form>
+        <p class="helper-text" id="auth-feedback">Crie sua conta ou entre para acessar seus registros.</p>
+      </section>
+
+      <section class="panel-card hidden" id="user-card">
+        <h2>Sua área</h2>
+        <p id="user-summary"></p>
+        <button id="logout-btn" class="secondary-btn">Sair</button>
+      </section>
+
+      <section class="panel-card hidden" id="subject-card">
+        <h2>Nova matéria</h2>
+        <form id="subject-form" class="stack-form">
+          <input type="text" id="subject-name" placeholder="Ex.: Biologia" required>
+          <input type="text" id="subject-color" placeholder="#2563EB" value="#2563EB">
+          <input type="text" id="subject-icon" placeholder="B" maxlength="1">
+          <button type="submit" class="primary-btn">Criar matéria</button>
+        </form>
+      </section>
+
+      <section class="panel-card hidden" id="entry-form-card">
+        <h2>Novo registro</h2>
+        <form id="entry-form" class="stack-form">
+          <select id="entry-subject" required></select>
+          <input type="text" id="entry-title" placeholder="Título do registro" required>
+          <textarea id="entry-note" placeholder="Notas da aula"></textarea>
+          <input type="file" id="entry-image" accept="image/*">
+          <button type="button" id="run-ocr-btn" class="secondary-btn">Extrair OCR no navegador</button>
+          <textarea id="entry-ocr" placeholder="Texto OCR"></textarea>
+          <button type="submit" class="primary-btn">Salvar registro</button>
+        </form>
+        <p class="helper-text" id="entry-feedback">O registro pode receber imagem, OCR, áudio e resumo.</p>
+      </section>
+
+      <section class="panel-card hidden" id="tools-card">
+        <h2>Ferramentas</h2>
+        <div class="tool-actions">
+          <button id="record-audio-btn" class="secondary-btn">Gravar áudio</button>
+          <button id="stop-audio-btn" class="danger-btn" disabled>Parar gravação</button>
+          <button id="attach-audio-btn" class="secondary-btn" disabled>Anexar áudio ao registro</button>
+          <input type="file" id="entry-audio" accept="audio/*">
+          <button id="analyze-ai-btn" class="primary-btn">Analisar com Gemini</button>
+        </div>
+        <p class="helper-text" id="tool-feedback">Escolha ou grave um áudio para o registro selecionado.</p>
+      </section>
+    </aside>
+
+    <main class="main-view">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Projeto pessoal</p>
+          <h2>Timeline inteligente de aula</h2>
+        </div>
+        <div class="search-box">
+          <input type="search" id="timeline-search" placeholder="Buscar por matéria, nota ou OCR">
+        </div>
+      </header>
+
+      <section class="stats-grid" id="stats-grid"></section>
+
+      <section class="subjects-strip" id="subjects-strip"></section>
+
+      <section class="timeline-section">
+        <div class="section-head">
+          <h3>Seus registros</h3>
+          <p class="helper-text">Cada item pode receber imagem, áudio, OCR, edição e análise de IA.</p>
+        </div>
+        <div id="timeline-list" class="timeline-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
