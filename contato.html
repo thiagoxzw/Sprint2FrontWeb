@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — JOVI Modo Aula</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">📷</div>
+        <div>
+          <div class="logo-text">JOVI</div>
+          <div class="logo-accent">MODO AULA</div>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="funcionalidades.html">Funcionalidades</a></li>
+          <li><a href="prototipo.html">Prot&oacute;tipo</a></li>
+          <li><a href="contato.html" class="btn-nav active">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====== LOGIN SECTION ====== -->
+  <section class="contact-section" style="min-height: 60vh;">
+    <div class="contact-container" style="align-items: center;">
+      <div class="contact-info">
+        <h2>Acesse sua <span class="text-teal">Conta JOVI</span></h2>
+        <p>Entre para gerenciar suas preferências do Modo Aula, sincronizar fotos acadêmicas e acessar o backup na nuvem.</p>
+        <p style="font-size: 0.9rem;">Não tem conta? Preencha o formulário de contato abaixo para participar do programa beta.</p>
+      </div>
+      <div class="contact-form-wrapper">
+        <h3 style="color: white; margin-bottom: 1rem; font-size: 1.2rem;">Login</h3>
+        <div class="form-group">
+          <label for="login-email">E-mail</label>
+          <input type="email" id="login-email" placeholder="seu@email.com">
+          <span class="form-error" id="login-email-error">Por favor, insira um e-mail válido.</span>
+        </div>
+        <div class="form-group">
+          <label for="login-senha">Senha</label>
+          <input type="password" id="login-senha" placeholder="Sua senha">
+          <span class="form-error" id="login-senha-error">A senha deve ter no mínimo 6 caracteres.</span>
+        </div>
+        <button class="btn-submit" id="btn-login" onclick="handleLogin()">Entrar</button>
+        <p style="text-align: center; margin-top: 0.8rem; font-size: 0.8rem; color: #64748B;">
+          Esqueceu a senha? <a href="#" style="color: var(--teal);">Redefinir</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT FORM ====== -->
+  <section class="features-section" style="padding: 4rem 1.5rem;">
+    <div class="section-header">
+      <h2>Formulário de Contato</h2>
+      <p>Quer participar do beta ou tem alguma sugestão? Fale conosco.</p>
+    </div>
+    <div style="max-width: 600px; margin: 0 auto; background: #f8fafc; border-radius: 16px; padding: 2rem; border: 1px solid var(--light-gray);">
+      <div class="form-group">
+        <label for="contact-nome" style="color: var(--text-secondary);">Nome completo</label>
+        <input type="text" id="contact-nome" placeholder="Seu nome" style="background: white; color: var(--text-primary); border-color: var(--light-gray);">
+        <span class="form-error" id="contact-nome-error">Por favor, insira seu nome.</span>
+      </div>
+      <div class="form-group">
+        <label for="contact-email" style="color: var(--text-secondary);">E-mail</label>
+        <input type="email" id="contact-email" placeholder="seu@email.com" style="background: white; color: var(--text-primary); border-color: var(--light-gray);">
+        <span class="form-error" id="contact-email-error">Por favor, insira um e-mail válido.</span>
+      </div>
+      <div class="form-group">
+        <label for="contact-assunto" style="color: var(--text-secondary);">Assunto</label>
+        <select id="contact-assunto" style="background: white; color: var(--text-primary); border-color: var(--light-gray);">
+          <option value="">Selecione um assunto</option>
+          <option value="beta">Quero participar do Beta</option>
+          <option value="sugestao">Sugestão de funcionalidade</option>
+          <option value="bug">Reportar problema</option>
+          <option value="parceria">Proposta de parceria</option>
+          <option value="outro">Outro</option>
+        </select>
+        <span class="form-error" id="contact-assunto-error">Selecione um assunto.</span>
+      </div>
+      <div class="form-group">
+        <label for="contact-msg" style="color: var(--text-secondary);">Mensagem</label>
+        <textarea id="contact-msg" placeholder="Escreva sua mensagem..." rows="4" style="background: white; color: var(--text-primary); border-color: var(--light-gray);"></textarea>
+        <span class="form-error" id="contact-msg-error">Por favor, escreva uma mensagem.</span>
+      </div>
+      <button class="btn-submit" style="background: var(--blue);" onclick="handleContact()">Enviar Mensagem</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2026 NextStage — Challenge FIAP x JOVI.</p>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="funcionalidades.html">Funcionalidades</a>
+        <a href="prototipo.html">Prot&oacute;tipo</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/validacao.js"></script>
+
+</body>
+</html>
