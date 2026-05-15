@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcionalidades — JOVI Modo Aula</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">📷</div>
+        <div>
+          <div class="logo-text">JOVI</div>
+          <div class="logo-accent">MODO AULA</div>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="funcionalidades.html" class="active">Funcionalidades</a></li>
+          <li><a href="prototipo.html">Prot&oacute;tipo</a></li>
+          <li><a href="contato.html" class="btn-nav">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" style="min-height: 40vh; padding: 3.5rem 1.5rem;">
+    <div class="hero-content" style="flex-direction: column; text-align: center;">
+      <div class="hero-text" style="max-width: 700px;">
+        <span class="hero-badge">Funcionalidades</span>
+        <h1>Tudo que o <span>Modo Aula</span> oferece</h1>
+        <p>Cada funcionalidade foi pensada para resolver dores reais dos estudantes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FEATURES DETALHADAS ====== -->
+  <section class="features-section">
+    <div class="features-grid" style="max-width: 1100px;">
+
+      <article class="feature-card">
+        <div class="feature-icon bg-blue">📂</div>
+        <h3>Subpastas por Matéria</h3>
+        <p>Crie pastas para cada disciplina (Cálculo, Física, Programação...). Ao capturar no Modo Aula, a foto vai direto para a pasta selecionada. Nunca mais misture fotos de aula com pessoais.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon bg-pink">📝</div>
+        <h3>OCR com Gemini AI</h3>
+        <p>Toque no botão OCR após capturar e a IA Gemini extrai o texto da imagem. Funciona com lousa, livro, caderno e slides. Suporta português, inglês e fórmulas matemáticas.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon bg-green">🧠</div>
+        <h3>IA Assistente em Tempo Real</h3>
+        <p>Antes de capturar, a IA analisa o viewfinder e alerta sobre: reflexos na lousa, foco insuficiente, iluminação ruim e ângulo inadequado. Melhore a qualidade na origem.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon bg-orange">🖼️</div>
+        <h3>Galeria Acadêmica</h3>
+        <p>Acesse todas as fotos organizadas por matéria em uma galeria dedicada. Busque por texto extraído via OCR. Encontre qualquer conteúdo em segundos.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon bg-teal">📊</div>
+        <h3>Captura Automática de Slides</h3>
+        <p>Em apresentações, a câmera detecta mudanças de slide e captura automaticamente. Anti-flickering ativado. Nunca mais perca um slide do professor.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon bg-yellow">🔗</div>
+        <h3>Compartilhar com Colegas</h3>
+        <p>Envie uma pasta completa de matéria para colegas via WhatsApp, link ou PDF compilado. Inclui fotos e textos OCR extraídos. Estudo em grupo facilitado.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ====== TECNOLOGIAS ====== -->
+  <section class="flow-section" style="padding: 4rem 1.5rem;">
+    <div class="section-header">
+      <h2 style="color: white;">Tecnologias Utilizadas</h2>
+      <p style="color: #94A3B8;">APIs abertas do Google que viabilizam tecnicamente o Modo Aula.</p>
+    </div>
+    <div class="features-grid" style="max-width: 1000px; margin: 0 auto;">
+      <article class="feature-card" style="background: var(--card-bg); border-color: transparent;">
+        <div class="feature-icon" style="background: rgba(37,99,235,0.2);">📷</div>
+        <h3 style="color: white;">CameraX + Camera2</h3>
+        <p style="color: var(--gray);">APIs Android para captura com controle de foco, exposição e análise de imagem em tempo real.</p>
+      </article>
+      <article class="feature-card" style="background: var(--card-bg); border-color: transparent;">
+        <div class="feature-icon" style="background: rgba(236,72,153,0.2);">🤖</div>
+        <h3 style="color: white;">Gemini AI</h3>
+        <p style="color: var(--gray);">IA multimodal do Google para OCR inteligente com suporte a português, fórmulas e handwriting.</p>
+      </article>
+      <article class="feature-card" style="background: var(--card-bg); border-color: transparent;">
+        <div class="feature-icon" style="background: rgba(16,185,129,0.2);">💾</div>
+        <h3 style="color: white;">MediaStore + ML Kit</h3>
+        <p style="color: var(--gray);">Gerenciamento de mídia nativo para pastas + ML Kit para detecção on-device de lousa e texto.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== SLIDESHOW ====== -->
+  <section class="features-section" style="background: #f8fafc;">
+    <div class="section-header">
+      <h2>Modo Aula em Ação</h2>
+      <p>Veja como a interface funciona no dia a dia do estudante.</p>
+    </div>
+    <div id="slideshow-container" style="max-width: 600px; margin: 0 auto; text-align: center;">
+      <div style="background: var(--navy); border-radius: 16px; padding: 2rem; min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;">
+        <div id="slide-icon" style="font-size: 3rem;">📂</div>
+        <h3 id="slide-title" style="color: white; font-size: 1.3rem;">Organização por Matéria</h3>
+        <p id="slide-desc" style="color: #94A3B8; max-width: 400px;">Selecione a disciplina e todas as fotos são salvas automaticamente na pasta correta.</p>
+        <div id="slide-counter" style="color: #64748B; font-size: 0.8rem;">1 / 4</div>
+      </div>
+      <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+        <button onclick="prevSlide()" class="btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">← Anterior</button>
+        <button onclick="nextSlide()" class="btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Próximo →</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="prototype-cta-band">
+    <div class="prototype-cta-content">
+      <div>
+        <p class="prototype-cta-label">Demonstra&ccedil;&atilde;o completa</p>
+        <h2>Veja o prot&oacute;tipo funcionando em HTML, CSS e JavaScript</h2>
+      </div>
+      <a href="prototipo.html" class="btn-primary">Abrir Prot&oacute;tipo</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2026 NextStage — Challenge FIAP x JOVI.</p>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="funcionalidades.html">Funcionalidades</a>
+        <a href="prototipo.html">Prot&oacute;tipo</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/slideshow.js"></script>
+
+</body>
+</html>
